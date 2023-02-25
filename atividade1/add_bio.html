@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Adicionar Biografia</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f8f8f8;
+		}
+
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+
+		form {
+			width: 600px;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 20px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+
+		label {
+			display: block;
+			font-size: 18px;
+			color: #333;
+			margin-bottom: 5px;
+		}
+
+		input[type="text"],
+		input[type="number"],
+		textarea {
+			width: 100%;
+			padding: 10px;
+			border: none;
+			background-color: #f2f2f2;
+			font-size: 16px;
+			color: #333;
+			border-radius: 5px;
+			margin-bottom: 15px;
+		}
+
+		input[type="file"] {
+			margin-bottom: 20px;
+		}
+
+		input[type="submit"] {
+			background-color: #56b4d3;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			margin-top: 20px;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3a8eac;
+		}
+
+		button {
+			background-color: #333;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 18px;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+
+		button:hover {
+			background-color: #222;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>Adicionar nova bio</h1>
+	<form action="cadastro.php" method="post" enctype="multipart/form-data">
+		<label for="nome">Nome:</label>
+		<input type="text" id="nome" name="nome" required>
+
+		<label for="idade">Idade:</label>
+		<input type="number" id="idade" name="idade" required>
+
+		<label for="profissao">Profissão:</label>
+		<input type="text" id="profissao" name="profissao" required>
+
+		<label for="resumo">Resumo:</label><br>
+		<textarea id="resumo" name="resumo" rows="5" cols="40" required></textarea>
+
+		<label for="foto">Foto:</label>
+		<input type="file" id="foto" name="foto" required>
+
+		<input type="submit" value="Salvar">
+		
+		<button onclick="window.location.href='index.php'">Voltar</button>
+		
+
+	</form>
+</body>
+</html>
